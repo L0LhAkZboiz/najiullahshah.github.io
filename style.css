@@ -127,6 +127,26 @@ nav .right a span {
     height: 300px;
     object-fit: cover;
 }
+
+/*skills section*/
+.skills 
+{
+    color: var(--color-3);
+    background-color: #283618;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 10px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+.skills .options{
+    flex: 5;
+}
+.skills .options h2 {
+    font-size: 45px;
+}
 @media(max-width:900px) {
     /*hero*/
     .hero-section .text h2
