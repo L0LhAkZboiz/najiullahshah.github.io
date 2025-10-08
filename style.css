@@ -1,7 +1,17 @@
 :root {
-    --text-color: #ffffff;
+    /*background 1*/
+    --color-1: #606c38;
+    /*background 2*/
+    --color-2: #283618;
+    /*text color*/
+    --color-3: #fefae0;
+    /*link color*/
+    --color-4: #dda15e;
+    /*topbar stuff*/
+    --color-5: #bc6c25;
+    /*--text-color: #ffffff;
     --link-color: #4a76ee;
-    --background-color: #065124;
+    --background-color: #065124;*/
 }
 
 * {
@@ -16,12 +26,12 @@ html {
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--color-2);
     font-family: 'Prompt', sans-sarif;
 }
 
 a {
-    color: var(--link-color);
+    color: var(--color-4);
     text-decoration: none;
 }
 
@@ -36,21 +46,21 @@ nav {
 }
 
 nav .left a {
-    color: var(--text-color);
+    color: var(--color-5);
     font-size: 30px;
     font-weight: 600;
 }
 
 nav .right a {
-    color: var(--text-color);
+    color: var(--color-5);
     margin: 0 10px;
     font-size: 20px;
     /*font-weight: 600;  */
 }
 
 nav .right a:last-child {
-    color: var(--background-color);
-    background-color: var(--text-color);
+    color: var(--color-2);
+    background-color: var(--color-5);
     padding: 5px 15px;
     border-radius: 5px;
 }
@@ -62,12 +72,13 @@ nav .right a span {
 /* hero */
 .hero-section
 {
-    color: var(--text-color);
+    color: var(--color-3);
+    background-color: #606c38;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    margin: 50px 0;
+    margin: 10px 0;
     margin-bottom: 100px;
     gap: 40px;
 }
@@ -82,7 +93,7 @@ nav .right a span {
 .hero-section .text .links
 {
     font-size: 20px;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 .hero-section .text .links a
 {
@@ -107,9 +118,14 @@ nav .right a span {
 }
 .hero-section .headshot img
 {
+    /*border-style: solid var(--color-5);*/
+    border: 5px solid var(--color-5);
     border-radius: 50%;
-    width: 400px;
-    height: 550px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 @media(max-width:900px) {
     /*hero*/
@@ -127,10 +143,13 @@ nav .right a span {
     .hero-section .headshot img
     {
         width: 200px;
-        height: 275px;
+        height: 200px;
+        object-fit: cover;
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 }
-@media(max-width: 710px){
+@media(max-width: 725px){
     /*nabar*/
     nav{
         padding: 0 20px;
@@ -141,7 +160,7 @@ nav .right a span {
     }
     nav .right a:last-child
     {
-        color: var(--text-color);
+        color: var(--color-5);
         background-color: transparent;
         padding: 0;
         border-radius: none;
