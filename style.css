@@ -135,8 +135,8 @@ nav .right a span {
     align-items: left;
     padding: 0 50px;
     margin: 10px 0;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-bottom: 10px;
     gap: 100px;
 }
@@ -159,7 +159,7 @@ nav .right a span {
 {
     font-size: 20px;
     display: block;
-    padding: 1px 20px;
+    padding: 1px 10px;
     align-items: center;
     background-color: var(--color-1);
     border-radius: 5px; 
@@ -172,10 +172,69 @@ nav .right a span {
     background-color: var(--color-4);
 }
 
-.skills .text
+.skills .right-side
 {
-    flex: 2;
-    align-content: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    text-align: center;
+}
+.skills .right-side .text
+{
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+    color: var(--color-4);
+    background-color: var(--color-1);
+    border-radius: 5px;
+    flex: 1;
+    display: flex;               /* Center the text vertically */
+    align-items: center;         /* Vertical center */
+    justify-content: center;     /* Horizontal center */
+    min-height: 80px;            /* Prevents shifting */
+    width: 100%;
+    min-width: 400px;
+    max-width: 400px;  
+}
+.skills .right-side .text p {
+  transition: all 0.7s ease;
+}
+.skills .right-side .pictures img{
+    border: 5px solid var(--color-5);
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.projects
+{
+    color: var(--color-3);
+    background-color: var(--color-1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: left;
+    padding: 0 50px;
+    margin: 10px 0;
+    margin-bottom: 10px;
+}
+.projects .title
+{
+    color: var(--color-3);
+    margin-top: 10px;
+    margin-left: 200px;
+}
+.projects .title h2
+{
+    font-size: 45px;
+}
+.projects .items 
+{
+    display: flex;
 }
 @media(max-width:900px) {
     /*hero*/
