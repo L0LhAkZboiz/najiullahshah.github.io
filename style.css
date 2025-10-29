@@ -411,16 +411,42 @@ nav .right a span {
 }
 @media(max-width:900px) {
     /*hero*/
+    .hero-section .text
+    {
+        margin-left: 50px;
+    }
+    .hero-section .headshot
+    {
+        margin-right: 50px;
+    }
     .hero-section .text h2
     {
         font-size: 35px;
     }    
+    .skills .right-side
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .skills .right-side .text
+    {
+        margin-left: 0px;
+    }
+    .projects .items
+    {
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media(max-width:790px)
 {
     .hero-section
     {
         flex-direction: column-reverse;
+    }
+    .hero-section .headshot
+    {
+        align-self: center;
     }
     .hero-section .headshot img
     {
