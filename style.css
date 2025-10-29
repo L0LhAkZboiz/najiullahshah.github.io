@@ -73,14 +73,15 @@ nav .right a span {
     background-color: var(--color-1);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 50px;
-    margin: 10px 0;
+    padding-top: 50px;
     margin-bottom: 15px;
     gap: 40px;
 }
 .hero-section .text
 {
+    margin-left: 200px;
     flex: 5;
 }
 .hero-section .text h2
@@ -106,12 +107,14 @@ nav .right a span {
 {
     color: var(--color-3);
     border: 2px solid var(--color-3);
+    transform: translateY(-10px);
 }
 .hero-section .headshot
 {
     flex: 2;
     display: flex;
     justify-content: right;
+    margin-right: 200px;
 }
 .hero-section .headshot img
 {
@@ -129,33 +132,47 @@ nav .right a span {
 .skills {
     color: var(--color-3);
     background-color: var(--color-2);
-    display: flex;
+    display: row;
     align-items: flex-start;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
     padding: 0 50px;
     margin: 10px 0;
     margin-left: 200px;
     margin-right: 200px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     gap: 100px;
 }
 
 .skills .left-side
 {
-    flex-direction: column;
+    flex-direction: row;
 }
 .skills .left-side .title
 {
+    text-align: center;
     margin-bottom: 10px;
 }
 .skills .left-side .title h2 {
     font-size: 45px;
 }
-.skills .left-side .options{
-    flex: 5;
+.skills .right-side
+{
+    display: row;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    text-align: center;
 }
-.skills .left-side .options a
+.skills .right-side .options
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex: 5;
+    gap: 15px;
+}
+.skills .right-side .options a
 {
     font-size: 20px;
     display: block;
@@ -166,20 +183,14 @@ nav .right a span {
     margin-bottom: 10px;
     transition: .1s;
 }
-.skills .left-side .options a:hover
+.skills .right-side .options a:hover
 {
     color: var(--color-1);
     background-color: var(--color-4);
+    transform: translateY(-10px);
+    cursor: default;
 }
 
-.skills .right-side
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers horizontally */
-    justify-content: center; /* Centers vertically */
-    text-align: center;
-}
 .skills .right-side .text
 {
     margin-top: 50px;
@@ -193,10 +204,9 @@ nav .right a span {
     display: flex;               /* Center the text vertically */
     align-items: center;         /* Vertical center */
     justify-content: center;     /* Horizontal center */
-    min-height: 80px;            /* Prevents shifting */
     width: 100%;
     min-width: 400px;
-    max-width: 400px;  
+    height: 300px;
 }
 .skills .right-side .text p {
   transition: all 0.7s ease;
@@ -210,23 +220,31 @@ nav .right a span {
     border-radius: 5px;
 }
 
+/* Project Section */
 .projects
 {
     color: var(--color-3);
     background-color: var(--color-1);
-    display: flex;
+    display: row;
     align-items: flex-start;
     justify-content: space-between;
-    align-items: left;
     padding: 0 50px;
+    padding-top: 15px;
+    padding-bottom: 20px;
     margin: 10px 0;
-    margin-bottom: 10px;
+}
+
+.projects .more-to-follow{
+    margin-top: 10px;
+    color: var(--color-3);
+    text-align: center;
 }
 .projects .title
 {
     color: var(--color-3);
+    text-align: center;
     margin-top: 10px;
-    margin-left: 200px;
+    margin-bottom: 30px;
 }
 .projects .title h2
 {
@@ -234,7 +252,162 @@ nav .right a span {
 }
 .projects .items 
 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    max-width: 800px;
+    margin: auto;
+    gap:20px;
+}
+.projects .items .project-card:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    cursor: default;
+}
+.projects .items .project-card
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 350px;
+    height: 350px;
+    background-color: var(--color-2);
+    border-radius: 10px;
+    overflow: hidden;
+    transform: 0.3s ease, box-shadow 0.3s ease;
+    transition: .1s;
+    border: 1px solid var(--color-5);
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+.projects .items .project-card .project-image
+{
+    height: 150px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.projects .items .project-card .project-image img
+{
+    max-width: 240px;
+    max-height: 150px;
+    object-fit: contain; /* keeps aspect ratio, fits nicely inside the box */
+    display: block; /* removes any inline gaps */
+    
+}
+
+.projects .items .project-card .content
+{
+    color: var(--color-5);
+    text-align: center;    
+
+}
+.projects .items .project-card .content a
+{
+    display: inline-block;
+    padding: 2px 10px;
+    border: 2px solid var(--color-4);
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+.projects .items .project-card .content a:hover
+{
+    color: var(--color-3);
+    border: 2px solid var(--color-3);
+}
+
+/*contact section*/ 
+
+.contact{
+    text-align: center;
+    align-items: center;
+    background: var(--color-2);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.contact h2{
+    color: var(--color-3);
+    font-size: 45px;
+}
+.contact .contact-form
+{
+    color: var(--color-3);
+}
+.contact .contact-form label {
+  color: var(--color-3);
+  display: block; /* ensures each label starts on a new line */
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+/* Make text boxes (inputs and textareas) larger and stack vertically */
+.contact .contact-form input[type="email"],
+.contact .contact-form textarea {
+  width: 100%; /* makes them stretch across the form container */
+  max-width: 600px; /* optional: keeps them from getting too wide */
+  padding: 12px;
+  margin-top: 8px;
+  display: block;
+  border: 1px solid var(--color-5);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--color-3); /* adjust to fit your theme */
+  color: var(--color-2); /* adjust if you have a dark theme */
+}
+/* Make text boxes (inputs and textareas) larger and stack vertically */
+.contact .contact-form input[type="subject"],
+.contact .contact-form textarea {
+  width: 100%; /* makes them stretch across the form container */
+  max-width: 600px; /* optional: keeps them from getting too wide */
+  padding: 12px;
+  margin-top: 8px;
+  display: block;
+  border: 1px solid var(--color-5);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--color-3); /* adjust to fit your theme */
+  color: var(--color-2); /* adjust if you have a dark theme */
+}
+
+.contact .contact-form input[type="message"],
+.contact .contact-form textarea {
+  height: 200px; /* makes them stretch across the form container */
+  width: 600px; /* optional: keeps them from getting too wide */
+  padding: 12px;
+  margin-top: 8px;
+  display: block;
+  border: 1px solid var(--color-5);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--color-3); /* adjust to fit your theme */
+  color: var(--color-2); /* adjust if you have a dark theme */
+  margin-bottom: 20px;
+}
+
+.contact .contact-form button
+{
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    color: var(--color-4);
+    background-color: var(--color-2);
+    border: 1px solid var(--color-4);
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.contact .contact-form button:hover
+{
+    color: var(--color-3);
+    border: 2px solid var(--color-3);
+    transform: translateY(-10px);
+    cursor: pointer;
 }
 @media(max-width:900px) {
     /*hero*/

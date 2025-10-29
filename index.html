@@ -38,7 +38,7 @@
         <span>LinkedIn</span>
       </a>
       
-      <a href="https://mailto:najiullahshah@gmail.com">
+      <a href="#contact">
         <i class="fa-solid fa-square-envelope"></i>
         <span>Email</span>
       </a>
@@ -51,8 +51,8 @@
     <!-- section 1: hero-->
     <section class="hero-section">
       <div class="text">
-        <h2>Hi, I'm Naji!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem maiores omnis iusto. Delectus adipisci, molestiae magnam perferendis quaerat debitis et quos saepe assumenda dolorum aspernatur minus ex ducimus eligendi. Nihil velit debitis similique provident recusandae nesciunt fugit eligendi perferendis est expedita, temporibus odit doloremque aut repudiandae vitae? Placeat, facilis?</p>
+        <h2>Hi, I'm Najiullah!</h2>
+        <p>I am a third year Computer Science, Mathematics, and Game Studies student at the University of Toronto. Click the buttons below or scroll down to learn more about my skills and experience!</p>
         <div class="links">
         <a href="#skills">
           <i class="fa-solid fa-code"></i>
@@ -68,7 +68,7 @@
         </a> -->
         <a href="#contact">
           <i class="fa-solid fa-envelope"></i>
-          <span>Contact</span>
+          <span>Contact Me</span>
         </a>
       </div>      
       </div>
@@ -77,66 +77,120 @@
       </div>
     </section>
     <!-- section 2: skills-->
-    <section class="skills">
+    <section id="skills" class="skills">
       <div class="left-side">
         <div class="title">
           <h2>Skills:</h2>
         </div>
+      </div>
+      <div class = "right-side">  
         <!--create a hover section-->
         <div class="options">
           <div>
-            <a href="#programming" data-text="Wealth of experience in programming languages such as Java, Python, C, C#, C++, Kotlin, and more." data-pic="images/blanka-headshot.webp">
+            <a  data-text="Wealth of experience in programming languages such as Java, Python, C, C#, C++, Kotlin, and more." data-pic="images/blanka-headshot.webp">
               <i class="fa-solid fa-terminal"></i>
               <span>Programming</span>
             </a>
           </div>
           <div>
-            <a href="#webdev" data-text="no">
+            <a data-text="Practical experience in Web Development using HTML5, CSS, JavaScript, and ReactNative.">
               <i class="fa-brands fa-html5"></i>
               <span>Web Development</span>
             </a>
           </div>
           <div>
-              <a href="#gamedev" data-text="maybe so">
+              <a  data-text="Experience developing games in engines like Unity, Godot, Unreal Engine, and GameMaker Studio, as well as developing games without the use of engines.">
               <i class="fa-solid fa-gamepad"></i>
               <span>Game Development</span>
             </a>  
           </div>
-        </div>
-      </div>
-      <div class = "right-side">      
+        </div>    
         <div class="text">
           <p></p>
         </div>
         <div class="pictures">
-          <img src="images/blanka-headshot.webp" alt="Picture of Najiullah Shah">
+          <!-- <img src="images/blanka-headshot.webp" alt="Picture of Najiullah Shah"> -->
         </div>
       </div>
     </section>
     <!-- section 3: projects-->
-    <section class="projects">
+    <section id="projects" class="projects">
       <div class="title">
-        <h2>Projects</h2>
+        <h2>Projects:</h2>
       </div>
       <div class="items">
-        <div class="The Cave of No Control">
+        <!-- p1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/cave-coverart.webp" alt="The Cave of No Control Cover Art"> 
+          </div>
+          <div class="content">
+            <h3>The Cave of No Control</h3>
+            <p class="type">Web Game</p>
+            <p class="desc">Made for Viral Glitch Game Jam 2025 in GameMaker Studio</p>
+            <a href="https://gx.games/games/40t6qx/the-cave-of-no-control" target="_blank">
+              <span>Check it out!</span>
+            </a>
+          </div>
         </div>
-        <div class="Thrive: Happy Habits">
+        <!-- p2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/thrive-icon.webp" alt="">
+          </div>
+          <div class="content">
+            <h3>Thrive: Happy Habits</h3>
+            <p class="type">iOS & Android App</p>
+            <p class="desc">An app built with React Native and Django used as a way for people to achieve their healthy living goals.</p>
+          <a href="https://apps.apple.com/ca/app/thrive-happy-habits/id6473956994" target="_blank">
+              <span>Check it out! (iOS)</span>
+            </a>
+          </div>
         </div>
-        <div class="The Mobile Game">
+        <!-- p3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/wipicon.webp" alt="">
+          </div>
+          <div class="content">
+            <h3>Pokemon: Java Edition</h3>
+            <p class="type">Game made in Java</p>
+            <p class="desc">Made entirely in Java without the use of a Game Engine. This project was used to develop strong programming fundamentals.</p>
+          </div>
         </div>
-        <div class="HalalScanner">
-        </div>
-        <div class="StickyMan Adventure">
-        </div>
-        <div class="Pokemon: Java Edition">
+        <!-- p4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/wipicon.webp" alt="">
+          </div>
+          <div class="content">
+            <h3>Counting Arrows</h3>
+            <p class="type">Mobile Game</p>
+            <p class="desc">Mobile Game made in GameMaker Studio. Try your luck to try and reach the highest score while shooting blocks falling from the sky with arrows!</p>
+          </div>
         </div>
       </div>
+      <div class="more-to-follow">
+        <h2>More projects are on their way!</h2>
+      </div>
+      
     </section>
-    <!-- section 4: testimony-->
-    <section id="testimony"></section>
     <!-- section 5: contact-->
-    <section id="contact"></section>
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" class="contact-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="subject" id="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send via Email</button>
+      </form>
+    </section>
   </main>
 <!-- navigation bar-->
 <!-- end of body of website -->
